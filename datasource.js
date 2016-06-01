@@ -289,16 +289,15 @@ function (angular, _, dateMath, kbn) {
 
     if (target.downsampling !== '(NONE)') {
       if (target.downsampling === undefined) {
-        target.downsampling = '(NONE)';
         //target.downsampling = 'avg';
 	//target.sampling = '10s';
       }
-      query.aggregators.push({
-        name: target.downsampling,
-        align_sampling: true,
+      //query.aggregators.push({
+        //name: target.downsampling,
+        //align_sampling: true,
         //align_start_time: true,
-        sampling: self.convertToKairosInterval(target.sampling || options.interval)
-      });
+        //sampling: self.convertToKairosInterval(target.sampling || options.interval)
+      //});
     }
 
     if (target.horizontalAggregators) {

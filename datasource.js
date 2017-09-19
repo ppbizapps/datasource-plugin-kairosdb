@@ -98,8 +98,9 @@ function (angular, _, sdk, dateMath, kbn) {
     var options = {
       url: this.url + '/api/v1/metricnames?containing=' + metric,
       withCredentials: this.withCredentials,
-      method: 'GET',
-      requestId: self.panelId + ".metricnames"
+      method: 'GET'
+//Commented the line below to fix runtime errors with templating in Grafana 4.x
+//      requestId: self.panelId + ".metricnames"
     };
 
     return this.backendSrv.datasourceRequest(options).then(function (response) {

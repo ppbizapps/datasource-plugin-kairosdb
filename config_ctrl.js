@@ -11,23 +11,6 @@ define(["require", "exports"], function (require, exports) {
             }
             this.getAllKairosDataSources();
         }
-        // getAllKairosDataSource() {
-        //   this.datasourceSrv.loadDatasource(this.current.name)
-        //   .then((ds) => {
-        //     return ds.backendSrv.$http
-        //   }).then(($http) => {
-        //     $http({
-        //       method: 'GET',
-        //       url: '/api/datasources'
-        //     }).then((response) => {
-        //       let kairosDatasourceList = []
-        //       for (let source of response.data) {
-        //         if (source.type == 'grafana-kairosdb-datasource') kairosDatasourceList.push(source)
-        //       }
-        //       this.current.jsonData.allKairosDataSource = kairosDatasourceList
-        //     })
-        //   })
-        // }
         KairosDBConfigCtrl.prototype.getAllKairosDataSources = function () {
             var allDataSources = this.datasourceSrv.getAll();
             for (var _i = 0, _a = Object.keys(allDataSources); _i < _a.length; _i++) {

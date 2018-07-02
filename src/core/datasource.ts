@@ -63,7 +63,8 @@ export class KairosDBDatasource {
         }
         const aliases = convertedTargets.map((target) => target.query.alias);
         const unpackedTargets = _.flatten(convertedTargets.map((target) => {
-            return this.templatingUtils.replace(target.query.metricName)
+            // return this.templatingUtils.replace(target.query.metricName)
+            return this.templatingUtils.replace(target.query)
                 .map((metricName) => {
                     const clonedTarget = _.cloneDeep(target);
                     clonedTarget.query.metricName = metricName;

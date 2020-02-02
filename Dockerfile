@@ -54,7 +54,7 @@ COPY dist $GF_PATHS_PLUGINS/kairosdb-datasource
 # ADD ./dashboards $GF_PATHS_DATA/dashboards
 
 # override configuration with env variables
-ENV GF_SECURITY_ADMIN_PASSWORD=kariosdb
+ENV GF_SECURITY_ADMIN_PASSWORD=kairosdb
 #ENV GF_USERS_DEFAULT_THEME=light
 ENV GF_SERVER_ENABLE_GZIP=true
 

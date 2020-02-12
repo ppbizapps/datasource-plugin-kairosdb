@@ -9,7 +9,7 @@ backend:
 	env GOOS=linux GOARCH=amd64 go build -o ./dist/grafana-kairosdb-datasource_linux_amd64 ./pkg
 
 docker:
-	docker build -t grafana-kariosdb -f Dockerfile .
+	docker build -t grafana-kairosdb -f Dockerfile .
 
 clean:
 	rm -r ./dist/*

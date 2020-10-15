@@ -6,9 +6,9 @@ import (
 
 	grafana "github.com/grafana/grafana_plugin_model/go/datasource"
 	"github.com/hashicorp/go-plugin"
-	"github.com/kyleboyle/kairosdb-datasource/pkg/datasource"
-	"github.com/kyleboyle/kairosdb-datasource/pkg/logging"
-	"github.com/kyleboyle/kairosdb-datasource/pkg/remote"
+	"github.com/ppbizapps/kairosdb-datasource/pkg/datasource"
+	"github.com/ppbizapps/kairosdb-datasource/pkg/logging"
+	"github.com/ppbizapps/kairosdb-datasource/pkg/remote"
 )
 
 func main() {

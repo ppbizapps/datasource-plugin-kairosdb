@@ -5,9 +5,9 @@ import (
 
 	"github.com/grafana/grafana_plugin_model/go/datasource"
 	plugin "github.com/hashicorp/go-plugin"
-	"github.com/kyleboyle/kairosdb-datasource/pkg/logging"
-	"github.com/kyleboyle/kairosdb-datasource/pkg/remote"
 	"github.com/pkg/errors"
+	"github.com/ppbizapps/kairosdb-datasource/pkg/logging"
+	"github.com/ppbizapps/kairosdb-datasource/pkg/remote"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

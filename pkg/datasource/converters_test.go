@@ -4,9 +4,9 @@ import (
 	"testing"
 
 	"github.com/golang/mock/gomock"
-	"github.com/kyleboyle/kairosdb-datasource/pkg/datasource"
-	"github.com/kyleboyle/kairosdb-datasource/pkg/datasource/internal/mock_datasource"
-	"github.com/kyleboyle/kairosdb-datasource/pkg/remote"
+	"github.com/ppbizapps/kairosdb-datasource/pkg/datasource"
+	"github.com/ppbizapps/kairosdb-datasource/pkg/datasource/internal/mock_datasource"
+	"github.com/ppbizapps/kairosdb-datasource/pkg/remote"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -53,6 +53,6 @@ cp /dist /var/lib/grafana/plugins/kairosdb-datasource
 A custom grafana image can built which includes the kairosdb plugin. After the above build steps have been completed:
 ```
 make docker
-docker run -d -p 3000:3000 --name=grafana grafana-kariosdb:latest
+docker run -d -p 3000:3000 --name=grafana grafana-kairosdb:latest
 ```
 The default login is admin:kairosdb. There are several build options that can be overridden. The base image was taken from [building-a-custom-grafana-image](https://grafana.com/docs/grafana/latest/installation/docker/#building-a-custom-grafana-image).

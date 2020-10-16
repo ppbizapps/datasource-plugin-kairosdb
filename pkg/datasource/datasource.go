@@ -2,12 +2,13 @@ package datasource
 
 import (
 	"encoding/json"
+	"strings"
 
 	"github.com/grafana/grafana_plugin_model/go/datasource"
 	plugin "github.com/hashicorp/go-plugin"
-	"github.com/kyleboyle/kairosdb-datasource/pkg/logging"
-	"github.com/kyleboyle/kairosdb-datasource/pkg/remote"
 	"github.com/pkg/errors"
+	"github.com/ppbizapps/kairosdb-datasource/pkg/logging"
+	"github.com/ppbizapps/kairosdb-datasource/pkg/remote"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
@@ -43,6 +44,10 @@ func (ds *KairosDBDatasource) Query(ctx context.Context, dsRequest *datasource.D
 			return nil, status.Errorf(codes.InvalidArgument, "failed to parse metric query: %s", err)
 		}
 		remoteQueries = append(remoteQueries, remoteQuery)
+	}
+
+	if strings.Contains(dsRequest.Datasource.Url, "pulse") {
+		dsRequest.Datasource.Url = strings.Replace(dsRequest.Datasource.Url, ".", "-alerting.", 1)
 	}
 
 	remoteRequest := &remote.MetricQueryRequest{

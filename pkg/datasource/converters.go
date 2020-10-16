@@ -1,7 +1,7 @@
 package datasource
 
 import (
-	"github.com/kyleboyle/kairosdb-datasource/pkg/remote"
+	"github.com/ppbizapps/kairosdb-datasource/pkg/remote"
 	"github.com/pkg/errors"
 	"regexp"
 	"strconv"

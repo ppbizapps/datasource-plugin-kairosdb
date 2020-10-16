@@ -96,8 +96,7 @@ export class KairosDBDatasource {
     }
 
     public testDatasource() {
-        const resp = this.executeRequest(this.getRequestBuilder().buildHealthCheckQuery());
-        return resp;
+        return this.executeRequest(this.getRequestBuilder().buildHealthCheckQuery());
     }
 
     private getRequestBuilder(scopedVars: any = {}): KairosDBQueryBuilder {
